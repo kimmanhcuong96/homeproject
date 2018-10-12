@@ -1,0 +1,25 @@
+@charset "ISO-8859-1";
+
+
+
+#result{
+	margin:0px 50px;
+}
+
+.clicked {
+  color: red;
+}
+
+#showResults{
+	text-align:left;
+}
+
+#footer-page{
+	min-height: 50px;
+	text-align: center;
+	background-color: rgb(222,224,228);
+}
+
+body{
+	background-color:rgb(233,234,237);
+}

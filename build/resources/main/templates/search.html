@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Home Page</title>
+	<link th:href="@{/css/main.css}" rel="stylesheet" />
+	<link th:href="@{/css/my.css}" rel="stylesheet" />
+	<link th:href="@{/css/demo_project.css}" rel="stylesheet" />
+	<link rel="stylesheet" th:href="@{https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css}">
+	<script th:src="@{/lib/jquery/jquery.min.js}"></script>
+<!-- 	<script th:src="@{https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js}"></script> -->
+	<script th:src="@{/js/demo_project.js}"></script>
+	
+</head>
+
+<script th:inline="javascript">
+/*<![CDATA[*/
+	serverContextPath =  /*[[@{/}]]*/;
+	
+/*]]>*/
+</script>
+
+<body style = "background-color:rgb(233,234,237);">
+	<div class="container-fluid">
+		<div class="row">
+		<nav class="navbar navbar-inverse" style = "background-color: rgb(253,73,0);border-color:rgb(253,73,0);">
+			<div class="col-md-12" style="text-align:center; ">
+				<div class="row">
+					<div class = "col-md-10 col-md-offset-2" >
+		   				<ul class="nav navbar-nav"  style = "background-color: rgb(253,73,0);">
+					      <li class="active ">
+					      	<a href="/"style = "background-color: rgb(253,73,0)" ><span class="glyphicon glyphicon-home" ></span>&ensp;Home</a>
+					      </li>
+		    			</ul>
+		  			</div>
+				</div>
+	  		</div>
+	  	</nav>
+		</div>
+		<div class="row d-flex align-items-stretch" style = "display:flex">
+			<div class="col-md-3" style="text-align:center;"></div>
+			<div class="col-md-6" style="text-align:center; background-color:white">
+				<div style="text-align:center; margin: 10px; margin-top: 100px;">
+						<input name="search" type="text" id="search-input-box" 
+								style="border-radius: 10px; border-style: solid; border-color: #BDBDBD; 
+								border-width: 3px; width: 600px; vertical-align: middle; padding-left:15px; padding-right:15px;"
+								placeholder="New Search ..." onkeydown="searching(event)">
+				</div>
+				<div>
+					<img th:src="@{/image/search-button.png}" onclick = "searching('ckmclick')" style="height: 50px; margin-top: 5px;" id = "searchimg" />
+				</div>
+				<div id="search-notification" class = "notification" > </div>
+				<h3 align="center">Kết quả</h3>
+				<div id="content" style="padding: 5px; overflow-x:hidden">
+					<div id="result-table" style="border:none">
+						
+							<table class="table table-responsive" style = "margin: 5px 10px;" id="tresult">
+								<thead>
+							      <tr>
+							        <th class="th-sm">Họ Tên </th>
+							        <th class="th-sm">Mã Số </th>
+							        <th class="th-sm">Quê Quán </th>
+							      </tr>
+							    </thead>
+							    <tbody id = "showResults" style="text-align:left;">
+							    </tbody>
+							  </table>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3" style="text-align:center;"></div>
+			
+		</div>
+		
+		<div class = "row">
+			<div class="col-md-3"></div>
+			<div class="col-md-6"  style="background-color:rgb(222,224,228)">
+				<div  id = "footer-page"> 
+				<div>
+					 @Some information
+				</div>
+				</div>
+			</div>
+			<div class="col-md-3"></div>
+		</div>
+
+	</div>
+</body>
+	
+</html>
